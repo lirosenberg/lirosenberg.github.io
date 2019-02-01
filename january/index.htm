@@ -24,22 +24,65 @@ list-style-type: none;
 }  
   h2 {
   text-decoration: underline;
-}  
+}
+    img {
+        border-radius: 75%;
+        border: 4px darkgreen;
+    }
+    img:hover {
+        animation: bounce 1s;
+    }
+    p {
+        background-color: darkred;
+        color: white;
+        border: double;
+        border-width: 5px;
+    }
+    a:link {
+        color:darkgreen;
+    }
+    a:visited {
+        color:dimgray;
+    }
+    a:hover {
+        color:darkred;
+    }
+.marquee {
+    background: red;
+    white-space: nowrap;
+    -webkit-animation: rightThenLeft 4s linear;
+}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
 </style>
 </head>
 <body>
     <center>
-    <h1>My (Stay)cation</h1>
+    <marquee behavior="alternate"><span class="marquee"><h1>My (Stay)cation</h1></span></marquee>
     <p>Over the winter break, my camp friends from Scarsdale, New York came to visit me in San Diego for a week. Here are some of the places we went together.</p>
     <br>
-    <h2>Los Angeles</h2>
+    <h2 style="color:darkblue;">Los Angeles</h2>
     <table>
         <tr>
-        <td><img src="images/fairfax.jpg" width="500" height="281" alt="Fairfax District"></td>
+        <td><img style="border-radius: 90%;"><img src="images/fairfax.jpg" width="500" height="281" alt="Fairfax District"></td>
         <td><img src="images/melrose.jpg" width="500" width="334" alt="Melrose Avenue"></td>
         </tr>
     </table>
-    <p>Near the end of our trip, I took my friends to LA. We went to the Hollywood Walk of Fame first, but we ended up leaving because it really was a tourist trap. For dinner, we went to DTLA and ate at the Grand Central Market. The next day, we went to Fairfax District in West Hollywood where we went window shopping at Supreme (where there was a 20 minute line to get in) and Bape. Then, we ate lunch at Spartina on Melrose Avenue, another trendy street in WeHo.</p>
+        <p>Near the end of our trip, I took my friends to LA. We went to the Hollywood Walk of Fame first, but we ended up leaving because it really was a tourist trap. For dinner, we went to DTLA and ate at the Grand Central Market. The next day, we went to Fairfax District in West Hollywood where we went window shopping at Supreme (where there was a 20 minute line to get in) and Bape. Then, we ate lunch at Spartina on <a href="#melrose"><a:link style="color:goldenrod">Melrose Avenue,</a:link></a> another trendy street in WeHo.</p>
     <br>
     <h2>La Jolla</h2>
         <table>
@@ -48,17 +91,17 @@ list-style-type: none;
         <td><img src="images/utc.jpg" width="500" height="333" alt="Nordstrom @ UTC"></td>
         </tr>
     </table>
-    <p>Earlier, we went to La Jolla where we went to the beach and go to UTC. The weather was surprisingly nice when we went, and it was always in the 70s. Then we went to UTC and walked around and did some shopping. We had Shake Shack for lunch even though my friends were dying to try In n Out, which we ended up having later on the way to LA. </p>
+        <p>Earlier, we went to La Jolla where we went to the beach and go to <a href="#utc"><a:link style="color:goldenrod">UTC.</a:link></a> The weather was surprisingly nice when we went, and it was always in the 70s. Then we went to UTC and walked around and did some shopping. We had Shake Shack for lunch even though my friends were dying to try In n Out, which we ended up having later on the way to LA.</p>
     <br>
     <h2>Del Mar</h2>
     <img src="images/sidecar.jpg" width="500" height="566" alt="Sidecar Doughnuts">
-    <p>On another day, we also went to Del Mar, which is isn't that far away since I live in Carmel Valley. We went to the Highlands and had Sidecar Doughnuts and their coffee for breakfast, which just opened there. We also went north to the beach.</p>
+        <p>On another day, we also went to Del Mar, which is isn't that far away since I live in Carmel Valley. We went to the Highlands and had <a href="#sidecar"><a:link style="color:goldenrod">Sidecar Doughnuts</a:link></a> and their coffee for breakfast, which just opened there. We also went north to the beach.</p>
     <br>
-    <h2>Links</h2>
+    <h2 style="color:goldenrod;">Links</h2>
     <ul>
-        <li><a href="https://www.melroseavela.com/">Melrose Avenue website</a></li>
-        <li><a href="https://www.westfield.com/utc">UTC website</a></li>
-        <li><a href="https://www.instagram.com/sidecardoughnuts/?hl=en">Sidecar Doughnuts' Instagram</a></li>
+        <li><div class="melrose" id="melrose"><a href="https://www.melroseavela.com/">Melrose Avenue website</a></div></li>
+        <li><div class="utc" id="utc"><a href="https://www.westfield.com/utc">UTC website</a></div></li>
+        <li><div class="sidecar" id="sidecar"><a href="https://www.instagram.com/sidecardoughnuts/?hl=en">Sidecar Doughnuts' Instagram</a></div></li>
     </ul>
     </center>
 </body>
